@@ -2,3 +2,4 @@ cesium-splat-viewer/node_modules/
 cesium-splat-viewer/data/outputs/
 requirements.txt
 .history/
+pnpm-lock.yaml
