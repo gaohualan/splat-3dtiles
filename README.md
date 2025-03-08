@@ -2,7 +2,7 @@
 
 This is a simple tool for converting splat to 3dtiles.
 <br>
-## How to use
+# How to use
 
 Install python dependencies
 
@@ -40,13 +40,13 @@ visit the page:
   http://localhost:8081/
   ```
 
-## What to do next
+# What to do next
 [1] Optimize performance.
 
 [2] Optimize rendering effects.
 
 
-## Thanks
+# Thanks
 [1] https://github.com/KhronosGroup/glTF-Tutorials/tree/main/gltfTutorial
 
 [2] https://github.com/CesiumGS/3d-tiles
