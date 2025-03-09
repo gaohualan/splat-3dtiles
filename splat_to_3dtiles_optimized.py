@@ -309,8 +309,8 @@ def main(input_path: str, output_dir: str):
 if __name__ == "__main__":
     # 解析命令行参数
     parser = argparse.ArgumentParser(description="将 Splat 文件转换为 3D Tiles。")
-    parser.add_argument("--input_path", type=str, help="输入的 .splat 文件路径")
-    parser.add_argument("--output_dir", type=str, help="输出的 3D Tiles 目录路径")
+    parser.add_argument("input_path", type=str, help="输入的 .splat 文件路径")
+    parser.add_argument("output_dir", type=str, help="输出的 3D Tiles 目录路径")
     args = parser.parse_args()
 
     # 调用主函数
