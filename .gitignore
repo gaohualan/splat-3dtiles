@@ -1,5 +1,6 @@
 cesium-splat-viewer/node_modules/
 cesium-splat-viewer/data/outputs/
+cesium-splat-viewer/data/3dtiles/model/
 requirements.txt
 .history/
 pnpm-lock.yaml

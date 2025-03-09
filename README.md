@@ -13,7 +13,7 @@ pip install
 run  splat_to_3dtiles_optimized.py
 
 ```sh
-python .\splat_to_3dtiles_optimized.py
+python .\splat_to_3dtiles_optimized.py --input_path "./cesium-splat-viewer/data/splat/model.splat" --output_dir "./cesium-splat-viewer/data/3dtiles/model"
 ```
 
 start your local server:

@@ -5,6 +5,7 @@ import struct
 import json
 from pyproj import Transformer
 from typing import List, Dict, Tuple
+import argparse
 
 is_geographic_coordinate = False
 
@@ -282,10 +283,7 @@ class NumpyEncoder(json.JSONEncoder):
 # 主函数
 
 
-def main():
-    input_path = r'./cesium-splat-viewer/data/splat/model.splat'
-    output_dir = r'./cesium-splat-viewer/data/outputs/model'
-
+def main(input_path: str, output_dir: str):
     # 读取 .splat 文件
     points = read_splat_file(input_path)
 
@@ -309,4 +307,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description="将 Splat 文件转换为 3D Tiles。")
+    parser.add_argument("--input_path", type=str, help="输入的 .splat 文件路径")
+    parser.add_argument("--output_dir", type=str, help="输出的 3D Tiles 目录路径")
+    args = parser.parse_args()
+
+    # 调用主函数
+    main(args.input_path, args.output_dir)
