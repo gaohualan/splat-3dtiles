@@ -146,7 +146,8 @@ def splat_to_gltf_with_gaussian_extension(points: List[Point], output_path: str)
     colors = np.array([point.color for point in points], dtype=np.uint8)
     scales = np.array([point.scale for point in points], dtype=np.float32)
     rotations = np.array([point.rotation for point in points], dtype=np.uint8)
-    normalized_rotations = rotations / 255.0
+    # normalized_rotations = rotations / 255.0
+    normalized_rotations = ((rotations-128.0)/128.0).astype(np.float32)
 
     # 创建 GLTF 对象
     gltf = GLTF2()
