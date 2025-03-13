@@ -53,6 +53,8 @@ def read_splat_file(file_path: str) -> List[Point]:
             scale = struct.unpack('3f', f.read(3 * 4))
             color = struct.unpack('4B', f.read(4 * 1))
             rotation = struct.unpack('4B', f.read(4 * 1))
+            # 调整四元数顺序 (x, y, z, w) -> (w, x, y, z)
+            rotation = (rotation[1], rotation[2], rotation[3], rotation[0])
             points.append(Point(position, color, scale, rotation))
     return points
 

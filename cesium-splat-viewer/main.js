@@ -12,7 +12,7 @@ async function loadTileset() {
 
   try {
     const tileset = await Cesium.Cesium3DTileset.fromUrl(
-      "http://localhost:8081/data/outputs/model/tileset.json",
+      "http://localhost:8081/data/3dtiles/model/tileset.json",
       {
         modelMatrix:computeModelMatrix(),
         maximumScreenSpaceError: 1,
